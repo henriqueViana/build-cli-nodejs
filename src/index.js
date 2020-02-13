@@ -3,6 +3,7 @@ const clear = require('clear')
 const figlet = require('figlet')
 
 const files = require('./helpers/files')
+const createQuestion = require('./helpers/createQuestions')
 
 clear()
 
@@ -17,3 +18,18 @@ if (files.directoryExists('.git')) {
     chalk.red('A Git repository !!!')
   )
 }
+
+createQuestion(
+  [
+    {
+      name: 'username',
+      type: 'input',
+      message: 'Enter your login'
+    },
+    {
+      name: 'password',
+      type: 'password',
+      message: 'Enter your password'
+    }
+  ]
+)
