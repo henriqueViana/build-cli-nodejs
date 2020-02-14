@@ -5,11 +5,17 @@ const schema = Joi.object({
     .alphanum()
     .min(2)
     .max(30)
-    .required(),
+    .required()
+    .error(() => {
+      return {
+        message: 'Invalid field name'
+      }
+    }),
   type: Joi.string()
-    .valid(['input', 'password'])
     .required(),
   message: Joi.string()
     .max(200)
     .required()
 })
+
+module.exports = schema

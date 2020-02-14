@@ -22,12 +22,12 @@ if (files.directoryExists('.git')) {
 createQuestion(
   [
     {
-      name: 'username',
+      name: 'u',
       type: 'input',
       message: 'Enter your login'
     },
     {
-      name: 'password',
+      name: 'sdfsdf',
       type: 'password',
       message: 'Enter your password'
     }
